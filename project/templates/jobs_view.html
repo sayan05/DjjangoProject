@@ -5,11 +5,14 @@
     <title>Jobs</title>
 </head>
 <body>
-<h1>All the Current Jobs</h1>
+<h1>All the Current Jobs in listed format(HTML)</h1>
+
 <ol>
     {% for x in ac %}
     <li>{{ x.Company_Name }} - {{ x.Expiry_Date }}</li>
     {% endfor %}
 </ol>
+
+<h4>To see the Data in JSON format <a href="Jobs/" target="_blank">Click Here</a></h4>
 </body>
 </html>
