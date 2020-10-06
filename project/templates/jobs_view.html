@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jobs</title>
+</head>
+<body>
+<h1>All the Current Jobs</h1>
+<ol>
+    {% for x in ac %}
+    <li>{{ x.Company_Name }} - {{ x.Expiry_Date }}</li>
+    {% endfor %}
+</ol>
+</body>
+</html>
