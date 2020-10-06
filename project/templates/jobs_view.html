@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Jobs</title>
+   <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 <body>
 <h1>All the Current Jobs in listed format(HTML)</h1>
-
-<ol>
+<table class="table">
+<thead>
+<th scope="col">Company Name</th>
+<th scope="col">Expiry Date</th>
+</thead>
+<tbody>
     {% for x in ac %}
-    <li>{{ x.Company_Name }} - {{ x.Expiry_Date }}</li>
+     <tr>
+         <td>{{ x.Company_Name }} </td>
+         <td> {{ x.Expiry_Date }}</td>
+     </tr>
     {% endfor %}
-</ol>
+</tbody>
+</table>
 
 <h4>To see the Data in JSON format <a href="Jobs/" target="_blank">Click Here</a></h4>
 </body>
